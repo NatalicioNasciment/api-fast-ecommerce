@@ -6,4 +6,4 @@ DB_URL = config('DB_URL')
 
 engine = create_engine(DB_URL, pool_pre_ping=True)
 
-Session = sessionmaker(engine)
+Session = sessionmaker(bind=engine)
